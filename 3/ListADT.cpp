@@ -62,12 +62,20 @@ ListADT::~ListADT(){
 
 	while(currentNode != NULL)
 	{
+		previousNode = currentNode;
+		delete previousNode;
+		currentNode = currentNode->next;
+	}
+	//delete previousNode;
+	
+	//also works :)
+	/*while(currentNode != NULL)
+	{
 		currentNode = currentNode->next;
 		delete previousNode;
 		previousNode = currentNode;
 
-	}
-	//delete previousNode;
+	}*/
 
 }
 
