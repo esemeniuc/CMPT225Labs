@@ -60,7 +60,7 @@ List::List(const List& lst){
 		while (pOldNode != NULL){
 			pNewNode->next = new Node;
 			pNewNode = pNewNode->next;
-			pNewNode->data = pOldNode->data;;
+			pNewNode->data = pOldNode->data;
 			pOldNode = pOldNode->next;
 		}
 		pNewNode->next = NULL;

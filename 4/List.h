@@ -29,7 +29,7 @@ public:
 	/* Generally every class should have at least two construtors, a
 	 * default constructor and a copy constructor that creates a copy
 	 * of the given object*/
-	List(); //default construtor
+	List(); //default constructor
 	List(const List& lst); //copy constructor
 	/* Every class should have a destructor, which is responsible for
 	 * cleaning  up any dynamic memory allocation performed by the class.
@@ -56,7 +56,7 @@ public:
 	bool remove(Type data );
 	
 	// PRE:
-	// POST: Empties the list, freeing up dynaically allocated memory
+	// POST: Empties the list, freeing up dynamically allocated memory
 	// PARAM: 
 	void removeAll();
 
@@ -83,9 +83,9 @@ public:
 
 //#include "List.h"
 #include <string>
-//#include <iostream>
+#include <iostream>
 
-//using namespace std; //needed for cout, cin to be recognised
+using namespace std; //needed for cout, cin to be recognised
 
 // Default constructor
 template <class Type>
@@ -175,7 +175,7 @@ void List<Type>::add(Type x)
 
 // Inserts a new node at the given position (or index) in the list
 template <class Type>
-void List<Type>::insertAt(int pos, int x)
+void List<Type>::insertAt(int pos, Type x)
 {
 	Node<Type> *p;
 	Node<Type> *newNode;
@@ -217,7 +217,7 @@ void List<Type>::insertAt(int pos, int x)
 // Removes the first node containing the given data, returns true
 // iff data is found (and deleted).
 template <class Type>
-bool List<Type>::remove(int x)
+bool List<Type>::remove(Type x)
 {
 	Node<Type> *p = head;
 	Node<Type> *temp;
@@ -254,6 +254,7 @@ bool List<Type>::remove(int x)
 	return false;
 }
 
+template <class Type>
 // Empties the list by deleting each node, starting at the head
 void List<Type>::removeAll()
 {
@@ -279,6 +280,7 @@ void List<Type>::removeAll()
  * and prType the retrieved element according to the IO environment
  * Note that the client code could delegate this IO responsibility
  * to a better suited class in the application (which would not be List). */
+template <class Type>
 void List<Type>::printList()
 {
 	Node<Type> *p = head;
