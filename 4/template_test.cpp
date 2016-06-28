@@ -29,7 +29,7 @@ int main()
 	testlist.remove( 9 );
 	// Confirm add(...) was successful by printing the List.
 	testlist.printList();
-	
+
 
 	// An empty int List has already been instantiated in another test case which tested the default constructor.
 	cout << "\n\nThe string List is empty: " << endl;
