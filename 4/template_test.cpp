@@ -7,7 +7,7 @@ int main()
 {
 
 	List<int> testlist; //make list of ints
-	List<string> testlist2; //make list of ints
+	List<string> testlist2; //make list of strings
 
 	// An empty int List has already been instantiated in another test case which tested the default constructor.
 	cout << "The int List is empty: " << endl;
